@@ -25,7 +25,7 @@ export function Hero({ title, description, primaryAction, secondaryAction }: Her
 
       <Container className="relative">
         <div className="mx-auto max-w-3xl text-center">
-          <h1 className="text-balance font-bold tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1 className="text-balance gradient-title font-bold tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
             {title}
           </h1>
           <p className="mt-6 text-balance text-lg text-muted-foreground sm:text-xl">
