@@ -1,7 +1,4 @@
-"use client";
-
 import Link from "next/link";
-import { useAuth } from "@clerk/nextjs";
 import { UserButton } from "@clerk/nextjs";
 import { ChevronDown, Mountain } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -13,9 +10,10 @@ import {
   DropdownMenuItem,
 } from "../ui/dropdown-menu";
 import { growthTools } from "@/constants/nav-items";
+import { checkUser } from "@/services/check-user";
 
-export default function Header() {
-  const { isSignedIn } = useAuth();
+export default async function Header() {
+  const signedUser = await checkUser();
 
   return (
     <header className="px-10 sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -27,7 +25,7 @@ export default function Header() {
         </Link>
 
         {/* Navigation items */}
-        {isSignedIn && (
+        {signedUser && (
           <div className="flex items-center gap-2">
             <Button asChild variant="ghost" size="sm">
               <Link href="/insights">Industry Insights</Link>
@@ -61,7 +59,7 @@ export default function Header() {
 
         {/* Auth button */}
         <div className="flex items-center">
-          {isSignedIn ? (
+          {signedUser ? (
             <UserButton afterSignOutUrl="/" />
           ) : (
             <Button asChild variant="ghost" size="sm">
