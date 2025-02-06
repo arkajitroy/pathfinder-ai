@@ -58,9 +58,9 @@ const DashboardView: React.FC<DashboardViewProps> = ({ insights }) => {
   console.log("DEBUG: salaryData", salaryData);
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4">
       <div className="flex justify-between items-center">
-        <Badge variant="outline">Last updated: {lastUpdatedDate}</Badge>
+        <Badge variant="secondary">Last updated: {lastUpdatedDate}</Badge>
       </div>
 
       {/* Market Overview Cards */}
@@ -122,8 +122,8 @@ const DashboardView: React.FC<DashboardViewProps> = ({ insights }) => {
           <CardDescription>Displaying minimum, median, and maximum salaries (in thousands)</CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="h-[400px] w-full">
-            <ResponsiveContainer width="100%" height="100%">
+          <div className="h-full w-full">
+            <ResponsiveContainer width={"100%"} height={400}>
               <BarChart data={salaryData}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="name" />
@@ -132,19 +132,23 @@ const DashboardView: React.FC<DashboardViewProps> = ({ insights }) => {
                   content={({ active, payload, label }) => {
                     if (active && payload && payload.length) {
                       return (
-                        <div className="bg-background border rounded-lg p-2 shadow-md">
-                          <p className="font-medium">{label}</p>
-                          {payload.map((item) => (
-                            <p key={item.name} className="text-sm">
-                              {item.name}: ${item.value}K
-                            </p>
-                          ))}
+                        <div className="bg-background border border-gray-700 shadow-xl rounded-xl p-4">
+                          <p className="font-semibold text-sm text-indigo-400 mb-4">{label}</p>
+                          <div className="space-y-2">
+                            {payload.map((item) => (
+                              <div key={item.name} className="flex justify-between items-center">
+                                <span className="text-xs font-medium text-gray-400">{item.name}</span>
+                                <span className="text-xs font-semibold text-gray-100">₹ {item.value}K</span>
+                              </div>
+                            ))}
+                          </div>
                         </div>
                       );
                     }
                     return null;
                   }}
                 />
+
                 <Bar dataKey="min" fill="#94a3b8" name="Min Salary (K)" />
                 <Bar dataKey="median" fill="#64748b" name="Median Salary (K)" />
                 <Bar dataKey="max" fill="#475569" name="Max Salary (K)" />
