@@ -3,7 +3,9 @@ import { Montserrat } from "next/font/google";
 
 import Header from "@/components/common/header";
 import Footer from "@/components/common/footer";
-import AppProvider from "@/components/misc/app-provider";
+import { ClerkProvider } from "@clerk/nextjs";
+import { dark } from "@clerk/themes";
+import { ThemeProvider } from "@/components/misc/theme-provider";
 
 import "./globals.css";
 
@@ -20,14 +22,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${montserrat.className} ${montserrat.className} antialiased`}>
-        <AppProvider>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </AppProvider>
-      </body>
-    </html>
+    <ClerkProvider
+      appearance={{
+        baseTheme: dark,
+      }}
+    >
+      <html lang="en" suppressHydrationWarning>
+        <body className={`${montserrat.className} ${montserrat.className} antialiased`}>
+          <ThemeProvider attribute={"class"} defaultTheme="dark" enableSystem disableTransitionOnChange>
+            <Header />
+            <main>{children}</main>
+            <Footer />
+          </ThemeProvider>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
