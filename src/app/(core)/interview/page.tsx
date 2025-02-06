@@ -1,7 +1,7 @@
 import { Container } from "@/components/common/container";
 import ResponsiveLayout from "@/components/common/responsive-layout";
 
-export default function IndustryInsights() {
+export default function InterviewPage() {
   return (
     <ResponsiveLayout>
       <Container className="py-20">

@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function OnboardingPage() {
+export default function AIResumeCreationPage() {
   return <div>page</div>;
 }
