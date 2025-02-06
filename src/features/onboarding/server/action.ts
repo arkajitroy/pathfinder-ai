@@ -63,10 +63,7 @@ export async function updateUser(data: TOnboardingFormSchema) {
     revalidatePath("/");
     return result.user;
   } catch (error) {
-    if (error instanceof Error) {
-      console.error("Error updating user and industry:", error.message);
-    }
-
+    if (error instanceof Error) console.error("Error updating user and industry:", error.message);
     throw new Error("Failed to update profile");
   }
 }
