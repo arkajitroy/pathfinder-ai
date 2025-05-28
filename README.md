@@ -64,48 +64,17 @@ Here’s a glimpse of Pathfinder-AI in action:
 ![sample screenshot](/.github/sample-1.png)
 ![sample screenshot 2](/.github/sample-2.png)
 
-Note: Replace the placeholder image URLs above with actual screenshot URLs hosted on your preferred platform (e.g., GitHub, Imgur). Update the links in the repository once screenshots are available.
+## 🛠️ Tech Stack
 
-🛠️ Tech Stack
+- **Frontend:** Next.js 15, React, Tailwind CSS, Shadcn UI
+- **Backend:** Convex DB for real-time data management
+- **Authentication:** Clerk
+- **AI Integration:** Gemini AI
+- **Others:** TypeScript, ESLint, Prettier
 
-Frontend: Next.js 15, React, Tailwind CSS, Shadcn UI
-Backend: Convex DB for real-time data management
-Authentication: Clerk
-AI Integration: Gemini AI
-Deployment: Vercel (recommended), Netlify, or other platforms
-Others: TypeScript, ESLint, Prettier
+## Personal Use: Free for non-commercial, personal projects.
 
-📜 License
-This project is licensed under a Paid Commercial License.
-
-Personal Use: Free for non-commercial, personal projects.
 Commercial Use: Requires a paid license. Purchase a commercial license via Gumroad (replace with your actual Gumroad link).
 Attribution: Commercial use requires attribution as outlined in the license agreement.
-
-For full details, see the TECHWITHEMMA-LICENSE.md.
-🤝 Contributing
-We welcome contributions to make Pathfinder-AI even better! To contribute:
-
-Fork the repository.
-Create a new branch (git checkout -b feature/your-feature).
-Make your changes and commit (git commit -m "Add your feature").
-Push to your branch (git push origin feature/your-feature).
-Open a Pull Request.
-
-Please read our Contributing Guidelines for more details.
-📞 Support
-Have questions or need help? Reach out to us:
-
-Email: support@pathfinder-ai.com
-GitHub Issues: Open an Issue
-Community: Join our Discord community (link TBD)
-
-🌟 Acknowledgements
-
-Clerk: For secure and seamless authentication
-Convex: For real-time database solutions
-Gemini AI: For powering intelligent insights
-Next.js & Tailwind CSS: For a modern, scalable frontend
-Shadcn UI: For beautiful, accessible components
 
 Thank you for exploring Pathfinder-AI! We’re excited to help you navigate the job market with confidence. Happy building! 💻✨
