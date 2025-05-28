@@ -1,82 +1,111 @@
-[Like & Subscribe To the Channel 🎥](https://tinyurl.com/subcribe-to-techwithEmma)
+# 🧠 Pathfinder-AI: Your AI-Powered Job Insight Assistant
 
-# 🧠 📺 Build a SaaS AI Platform – (AI Job Insight Assistant)
-
-Welcome to the official GitHub repository of the **AI Job Insight Assistant Saas** – a powerful AI-driven SaaS platform built to help users gain intelligent job insights and personalized guidance in the job market.
-
----
-
-## ❤️ Support The Channel
-
-If you love this project and want to support educational tech content:
-
-- 🌟 Star this repo
-- 🎥 [Subscribe on YouTube](https://tinyurl.com/subcribe-to-techwithEmma)
-- ☕ [Buy Me a Coffee](https://www.buymeacoffee.com/techwithemmaofficial)
-
----
+Welcome to **Pathfinder-AI**, an innovative AI-driven SaaS platform designed to empower job seekers with intelligent insights and personalized guidance to navigate the job market with confidence. Whether you're exploring career paths, refining job applications, or seeking tailored advice, Pathfinder-AI is your go-to assistant.
 
 ## 🌟 Features
 
-- 🔐 **Authentication with Clerk** (Google, Email, Password)
-- 📝 **Add & Manage Job Descriptions**
-- 💬 **Real-Time Chat with AI**
-- 💳 **Credit-Based System for Usage**
-- 🤖 **AI Prompting & Insights (Gemini AI)**
-- 💸 **Payments via PayPal**
-- 🌐 **Built with Next.js 15**
-- 🎨 **Styled with Tailwind CSS & Shadcn UI**
-- 🛠️ **Seamless Backend**
-- 🚀 **Deployed on Vercel**
+- 🔐 **Secure Authentication:** Seamlessly sign in using Clerk with Google, email, or password-based authentication.
+- 📝 **Job Description Management:** Easily add, edit, and manage job descriptions to keep track of opportunities.
+- ⚡ **Reactive Database:** Powered by `Convex DB` for real-time data updates and smooth performance.
+- 💬 **Real-Time AI Chat:** Engage in dynamic conversations with AI to get instant job market insights and advice.
+- 💳 **Credit-Based System:** Flexible usage with a credit system for accessing premium AI features.
+- 🤖 **AI-Powered Insights:** Leverage Gemini AI for intelligent job recommendations and career guidance.
+- 🌐 **Modern Tech Stack:** Built with `Next.js 15` for a fast, scalable, and SEO-friendly experience.
+- 🎨 **Beautiful UI:** Styled with Tailwind CSS and Shadcn UI for a sleek, user-friendly interface.
+- 🛠️ **Robust Backend:** Seamless integration for reliable performance and scalability.
 
----
+### 🚀 Getting Started
 
-## 🔧 How to Use This Project
+Follow these steps to set up Pathfinder-AI locally, explore a live demo, or deploy it to production.
+Prerequisites
 
-### 📺 Step 1: Watch the Full Tutorial on YouTube
+- Node.js: Version 18.x or higher
+- npm or yarn: For package management
+- Clerk Account: For authentication setup
+- Convex Account: For database configuration
+- Gemini AI API Key: For AI-powered features
+- Git: To clone the repository
 
-> Learn how it all works, including the folder structure, integration, AI config, and more.
+### Installation
 
-👉 [Click Here to Watch the Full Build Process](https://tinyurl.com/subcribe-to-techwithEmma)
+Clone the Repository:
+[`git clone https://github.com/TechWithEmmaYT/pathfinder-ai.git`](https://github.com/arkajitroy/pathfinder-ai.git)
 
----
+Install Dependencies:
+`npm install` OR `yarn install`
 
-### 💻 Step 2: Run It Locally, Live Preview & Deploy with Full Instructions
+### Set Up Environment Variables:
 
-> Want to run this project on your own machine and deploy it? We've got you covered with screenshots to guide you through every step!
+Create a .env.local file in the root directory and add the following:
 
-🔐 Access the **full PDF setup guide + live preview demo link + deployment guide** via Gumroad:
+```bash
+NEXT_PUBLIC_APP_URL=http://localhost:3000
 
-👉 [https://techwithemma.gumroad.com/l/jfgek](https://techwithemma.gumroad.com/l/jfgek) _(🙏 Support our work to give free content)_
+# Deployment used by `npx convex dev`
+CONVEX_DEPLOYMENT=
+NEXT_PUBLIC_CONVEX_URL=
 
-You’ll get:
 
-- Step-by-step local setup instructions
-- Environment variables to configure
-- Live hosted version to explore
-- Screenshots and explanations
-- Bonus tips for deploying to production
+# CLERK AUTHENTICATION CREDs
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
 
-> **Note:** This PDF is created to help you get the most out of the project without confusion. Check it out
+# GEMINI AI CREDs
+GEMINI_API_KEY=
+```
 
----
+Run the Development Server:
+`npm run dev` OR `yarn dev` OR `pnpm run dev`
 
-## 📜 License Information
+## 📸 Screenshots
 
-This project is licensed under a **paid commercial license**.
+Here’s a glimpse of Pathfinder-AI in action:
 
-- **Personal Use**: You may use this code for personal, non-commercial projects.
-- **Commercial Use**: A paid license is required for commercial use. To obtain a commercial license, please visit [Gumroad Link](#) for further details and purchasing options.
-- **Attribution**: If used commercially, attribution is required as per the license agreement.
+![sample screenshot](/.github/sample-1.png)
+![sample screenshot 2](/.github/sample-2.png)
 
-For full license details, please refer to the [TECHWITHEMMA-LICENSE.md](https://github.com/TechWithEmmaYT/AI-Job-Assistant-Saas-Platform/blob/main/TECHWITHEMMA-LICENSE.md).
+Note: Replace the placeholder image URLs above with actual screenshot URLs hosted on your preferred platform (e.g., GitHub, Imgur). Update the links in the repository once screenshots are available.
 
----
+🛠️ Tech Stack
 
-## 📺 Subscribe for More Projects
+Frontend: Next.js 15, React, Tailwind CSS, Shadcn UI
+Backend: Convex DB for real-time data management
+Authentication: Clerk
+AI Integration: Gemini AI
+Deployment: Vercel (recommended), Netlify, or other platforms
+Others: TypeScript, ESLint, Prettier
 
-If you find this helpful, support by subscribing and sharing:
+📜 License
+This project is licensed under a Paid Commercial License.
 
-🔗 [https://tinyurl.com/subcribe-to-techwithEmma](https://tinyurl.com/subcribe-to-techwithEmma)
+Personal Use: Free for non-commercial, personal projects.
+Commercial Use: Requires a paid license. Purchase a commercial license via Gumroad (replace with your actual Gumroad link).
+Attribution: Commercial use requires attribution as outlined in the license agreement.
 
-Thanks for stopping by — and happy building! 💻✨
+For full details, see the TECHWITHEMMA-LICENSE.md.
+🤝 Contributing
+We welcome contributions to make Pathfinder-AI even better! To contribute:
+
+Fork the repository.
+Create a new branch (git checkout -b feature/your-feature).
+Make your changes and commit (git commit -m "Add your feature").
+Push to your branch (git push origin feature/your-feature).
+Open a Pull Request.
+
+Please read our Contributing Guidelines for more details.
+📞 Support
+Have questions or need help? Reach out to us:
+
+Email: support@pathfinder-ai.com
+GitHub Issues: Open an Issue
+Community: Join our Discord community (link TBD)
+
+🌟 Acknowledgements
+
+Clerk: For secure and seamless authentication
+Convex: For real-time database solutions
+Gemini AI: For powering intelligent insights
+Next.js & Tailwind CSS: For a modern, scalable frontend
+Shadcn UI: For beautiful, accessible components
+
+Thank you for exploring Pathfinder-AI! We’re excited to help you navigate the job market with confidence. Happy building! 💻✨

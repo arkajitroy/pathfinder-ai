@@ -4,9 +4,9 @@ import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { Onest } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
-import { ConvexClientProvider } from "@/context/ConvexClientProvider";
 import { Suspense } from "react";
 import FallbackLoader from "@/components/FallbackLoader";
+import { ConvexClientProvider } from "@/context/convex-client.provider";
 
 const onest = Onest({ subsets: ["latin"] });
 
@@ -23,10 +23,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body
-          className={`bg-white ${onest.className}`}
-          suppressHydrationWarning
-        >
+        <body className={`bg-white ${onest.className}`} suppressHydrationWarning>
           <ConvexClientProvider>
             <Suspense fallback={<FallbackLoader />}>
               <NuqsAdapter>{children}</NuqsAdapter>
