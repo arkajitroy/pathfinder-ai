@@ -1,80 +1,130 @@
 # 🧠 Pathfinder-AI: Your AI-Powered Job Insight Assistant
 
-Welcome to **Pathfinder-AI**, an innovative AI-driven SaaS platform designed to empower job seekers with intelligent insights and personalized guidance to navigate the job market with confidence. Whether you're exploring career paths, refining job applications, or seeking tailored advice, Pathfinder-AI is your go-to assistant.
+<img src="./.github/readme-logo.svg" width="400" height="auto">
+
+Welcome to **Pathfinder-AI**, an innovative AI-driven SaaS platform designed to empower job seekers with intelligent insights and personalized guidance. Navigate the job market confidently, whether you're exploring career paths, refining applications, or seeking tailored advice.
 
 ## 🌟 Features
 
-- 🔐 **Secure Authentication:** Seamlessly sign in using Clerk with Google, email, or password-based authentication.
-- 📝 **Job Description Management:** Easily add, edit, and manage job descriptions to keep track of opportunities.
-- ⚡ **Reactive Database:** Powered by `Convex DB` for real-time data updates and smooth performance.
-- 💬 **Real-Time AI Chat:** Engage in dynamic conversations with AI to get instant job market insights and advice.
-- 💳 **Credit-Based System:** Flexible usage with a credit system for accessing premium AI features.
-- 🤖 **AI-Powered Insights:** Leverage Gemini AI for intelligent job recommendations and career guidance.
-- 🌐 **Modern Tech Stack:** Built with `Next.js 15` for a fast, scalable, and SEO-friendly experience.
-- 🎨 **Beautiful UI:** Styled with Tailwind CSS and Shadcn UI for a sleek, user-friendly interface.
-- 🛠️ **Robust Backend:** Seamless integration for reliable performance and scalability.
+- **Secure Authentication**: Sign in seamlessly using Clerk with Google, email, or password-based authentication.
+- **Market Trends Analyzer**: AI-driven analysis of job market trends with personalized suggestions.
+- **AI-Powered Insights**: Leverage Gemini AI for intelligent job recommendations and career guidance.
+- **Job-Ready Tools**: Build professional resumes and cover letters with AI-powered tools.
+- **AI Mock Interview**: Practice with realistic, AI-generated interview questions and feedback.
+- **Modern Tech Stack**: Built with Next.js 15 for a fast, scalable, and SEO-friendly experience.
+- **Beautiful UI**: Styled with Tailwind CSS and Shadcn UI for a sleek, user-friendly interface.
+- **Robust Backend**: Seamless integration with Convex for reliable performance and scalability.
 
-### 🚀 Getting Started
+## 🚀 Getting Started
 
 Follow these steps to set up Pathfinder-AI locally, explore a live demo, or deploy it to production.
-Prerequisites
 
-- Node.js: Version 18.x or higher
-- npm or yarn: For package management
-- Clerk Account: For authentication setup
-- Convex Account: For database configuration
-- Gemini AI API Key: For AI-powered features
-- Git: To clone the repository
+### Prerequisites
+
+- **Node.js**: Version 18.x or higher
+- **npm or Yarn**: For package management
+- **Clerk Account**: For authentication setup
+- **Convex Account**: For database configuration
+- **Gemini AI API Key**: For AI-powered features
+- **Git**: To clone the repository
 
 ### Installation
 
-Clone the Repository:
-[`git clone https://github.com/TechWithEmmaYT/pathfinder-ai.git`](https://github.com/arkajitroy/pathfinder-ai.git)
+1. **Clone the Repository**:
 
-Install Dependencies:
-`npm install` OR `yarn install`
+   ```bash
+   git clone https://github.com/your-repo/pathfinder-ai.git
 
-### Set Up Environment Variables:
+   cd pathfinder-ai
+   ```
 
-Create a .env.local file in the root directory and add the following:
+2. **Install Dependencies**:
 
-```bash
-NEXT_PUBLIC_APP_URL=http://localhost:3000
+   ```bash
+   npm install
+   ```
 
-# Deployment used by `npx convex dev`
-CONVEX_DEPLOYMENT=
-NEXT_PUBLIC_CONVEX_URL=
+   or
 
+   ```bash
+   yarn install
+   ```
 
-# CLERK AUTHENTICATION CREDs
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
-CLERK_SECRET_KEY=
+3. **Set Up Environment Variables**:
+   Create a `.env.local` file in the root directory and add the following:
 
-# GEMINI AI CREDs
-GEMINI_API_KEY=
-```
+   ```bash
+   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+   CLERK_SECRET_KEY=your_clerk_secret_key
+   NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+   NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+   NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/onboarding
+   NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/onboarding
+   DATABASE_URL=your_convex_database_url
+   GEMINI_API_KEY=your_gemini_api_key
+   ```
 
-Run the Development Server:
-`npm run dev` OR `yarn dev` OR `pnpm run dev`
+4. **Run the Development Server**:
+   ```bash
+   npm run dev
+   ```
+   or
+   ```bash
+   yarn dev
+   ```
+   or
+   ```bash
+   pnpm run dev
+   ```
 
 ## 📸 Screenshots
 
 Here’s a glimpse of Pathfinder-AI in action:
 
-![sample screenshot](/.github/sample-1.png)
-![sample screenshot 2](/.github/sample-2.png)
+### Onboarding Form
+
+Initial setup form to personalize your Pathfinder-AI dashboard experience.
+
+![Onboarding Form](.github/onboarding-form.png)
+
+### Industry Insights
+
+AI-driven analysis of job market trends with actionable insights.
+
+![Industry Insights](.github/market-trends.jpeg)
+
+### AI Resume Builder
+
+Create professional resumes with AI assistance, featuring customizable templates.
+
+<div style="display: flex; gap: 20px;">
+  <img src="./.github/resume-builder.jpeg" width="450" height="auto">
+  <img src="./.github/resume-builder-mardown.jpeg" width="450" height="auto">
+</div>
+
+### AI Cover Letter Builder
+
+Generate tailored cover letters with AI-driven suggestions and previews.
+
+<div style="display: flex; gap: 20px;">
+  <img src="./.github/cover-letter.png" width="450" height="auto">
+  <img src="./.github/cover-letter-preview.png" width="450" height="auto">
+</div>
+
+### AI Mock Interview
+
+Practice with AI-generated interview questions and receive real-time feedback.
+
+<div style="display: flex; gap: 20px;">
+  <img src="./.github/mock-interview-question.png" width="450" height="auto">
+  <img src="./.github/mock-interview-dashboard.jpeg" width="450" height="auto">
+</div>
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** Next.js 15, React, Tailwind CSS, Shadcn UI
-- **Backend:** Convex DB for real-time data management
-- **Authentication:** Clerk
-- **AI Integration:** Gemini AI
-- **Others:** TypeScript, ESLint, Prettier
-
-## Personal Use: Free for non-commercial, personal projects.
-
-Commercial Use: Requires a paid license. Purchase a commercial license via Gumroad (replace with your actual Gumroad link).
-Attribution: Commercial use requires attribution as outlined in the license agreement.
+- **Frontend**: Next.js 15, React, Tailwind CSS, Shadcn UI
+- **Authentication**: Clerk
+- **AI Integration**: Gemini AI
+- **Others**: TypeScript, ESLint, Prettier
 
 Thank you for exploring Pathfinder-AI! We’re excited to help you navigate the job market with confidence. Happy building! 💻✨
